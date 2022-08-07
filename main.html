@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="cardFlip.css">
+    <link rel="stylesheet" href="overlay.css">
+    <title>NetFilms</title>
+</head>
+
+<body>
+    <header>
+         <!-- navbar on header -->
+        <div class="card-img-overlay-s">
+            <nav class="navbar overlay navbar-expand-sm  navbar-dark bg-dark" style="z-index:3">
+                <div class="container-fluid">
+                    <img class="navbar-brand" src="./photo/logo2.png" alt="">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./orderTicktesPage.html">Order Tickets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactUs">Contact us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Category
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#actionMovies">Action</a></li>
+                                    <li><a class="dropdown-item" href="#dramaMovies">Drama</a></li>
+                                    <li><a class="dropdown-item" href="#comedyMovies">Comedy</a></li>
+                                    <li><a class="dropdown-item" href="#kidsMovies">kids</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- carousel of movie picture on header -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./photo/dr-strange.jpg" class="d-block w-100" alt="dr-strange">
+                </div>
+                <div class="carousel-item">
+                    <img src="./photo/Haunted.jpg" class="d-block w-100" alt="Haunted">
+                </div>
+                <div class="carousel-item">
+                    <img src="./photo/revenge-time.jpg" class="d-block w-100" alt="revenge-time">
+                </div>
+                <div class="carousel-item">
+                    <img src="./photo/sonic.jpg" class="d-block w-100" alt="sonic">
+                </div>
+                <div class="carousel-item">
+                    <img src="./photo/tom.jpg" class="d-block w-100" alt="tom">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+       
+    </header>
+    <main class="bg-dark border">
+        <div class="container mt-3 mb-5">
+            <div id="actionMovies">
+                <div>
+                    <h1 class="text-light">Action movies</h1>
+                </div>
+                <div class="row gy-3">
+                    <!-- Top Gun Macerick -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/tom.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Top Gun: Maverick</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Top Gun: Maverick</h3>
+                                    <p class="card-text">After more than thirty years of service as one of the senior
+                                        pilots
+                                        in the U.S. Navy, Pete "Maverick" Mitchell</p>
+                                    <p><b>length : </b>112m</p>
+                                    <p><b>Price for ticket : </b>7.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            href="#topGunMacerickTrailer" role="button" aria-expanded="false"
+                                            aria-controls="topGunMacerickTrailer">watch trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dr strange -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/dr-strange.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Dr strange</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Dr strange</h3>
+                                    <p class="card-text">Marvel's cinematic universe expands the multiverse and
+                                        stretches
+                                        its boundaries farther than ever. Embark on a journey into the non</p>
+                                    <p><b>length : </b>107m</p>
+                                    <p><b>Price for ticket : </b>7.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#drStrangeTrailer"
+                                            role="button" aria-expanded="false" aria-controls="drStrangeTrailer">watch
+                                            trailer</button>
+
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Haunted -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/Haunted.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Haunted</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Haunted</h3>
+                                    <p class="card-text">After experiencing an unbearable personal tragedy, Harper
+                                        decides to find some peace of mind in a secluded cabin</p>
+                                    <p><b>length : </b>100m</p>
+                                    <p><b>Price for ticket : </b>7.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#hauntedTrailer"
+                                            role="button" aria-expanded="false" aria-controls="hauntedTrailer">watch
+                                            trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Memory -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/Memory.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Memory</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Memory</h3>
+                                    <p class="card-text">Alex Lewis (Liam Neeson) is a skilled assassin with a
+                                        reputation for confidentiality and accuracy. When he got into trouble</p>
+                                    <p><b>length : </b>120m</p>
+                                    <p><b>Price for ticket : </b>7.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#memoryTrailer"
+                                            role="button" aria-expanded="false" aria-controls="memoryTrailer">watch
+                                            trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-5" id="kidsMovies">
+                <div>
+                    <h1 class="text-light">kids movies</h1>
+                </div>
+                <div class="row gy-3">
+                    <!-- Rock Dog 2 -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/Rock_Dog.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Rock Dog 2</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Rock Dog 2</h3>
+                                    <p class="card-text">Body and his band have become celebs in their village on the
+                                        snowy mountain, and they even have avid fans. when the</p>
+                                    <p><b>length : </b>87m</p>
+                                    <p><b>Price for ticket : </b>5.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#rockDogTrailer"
+                                            role="button" aria-expanded="false" aria-controls="rockDogTrailer">watch
+                                            trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Wolf and the Lion -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/The Wolf and the Lion.jpg" width="100%" height="100%"
+                                    alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>The Wolf and the Lion</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">The Wolf and the Lion</h3>
+                                    <p class="card-text">From the creators of "Mia and the White Lion". Her mother
+                                        arrives at the cabin of her recently deceased grandfather. While moving there
+                                    </p>
+                                    <p><b>length : </b>99m</p>
+                                    <p><b>Price for ticket : </b>5.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            href="#theWolfAndTheLionTrailer" role="button" aria-expanded="false"
+                                            aria-controls="theWolfAndTheLionTrailer">watch
+                                            trailer</button>
+
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-5" id="dramaMovies">
+                <div>
+                    <h1 class="text-light">Drama movies</h1>
+                </div>
+                <div class="row gy-3">
+                    <!-- Escape from pretoria -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/escape_from_pretoria.jpg" width="100%" height="100%"
+                                    alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Escape from pretoria</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Escape from pretoria</h3>
+                                    <p class="card-text">From the producers of "Mumbai Hotel" and "Back from Tuoichi"
+                                        comes a breathtaking thriller based on a story</p>
+                                    <p><b>length : </b>106m</p>
+                                    <p><b>Price for ticket : </b>5.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            href="#escapeFromPretoriaTrailer" role="button" aria-expanded="false"
+                                            aria-controls="escapeFromPretoriaTrailer">watch
+                                            trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- A Vigilante -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/revenge-time.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>A Vigilante</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">A Vigilante</h3>
+                                    <p class="card-text">After months of survival training, martial arts and boxing,
+                                        Sadie (Olivia Wilde) embarks on a journey
+                                    </p>
+                                    <p><b>length : </b>91m</p>
+                                    <p><b>Price for ticket : </b>6.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#aVigilanteTrailer"
+                                            role="button" aria-expanded="false" aria-controls="aVigilanteTrailer">watch
+                                            trailer</button>
+
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eiffel -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/eiffel.jpg" width="100%" height="100%" alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4>Eiffel</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Eiffel</h3>
+                                    <p class="card-text">The acclaimed French engineer Gustave Eiffel has just finished
+                                        the intensive work on the Statue of Liberty,
+                                    </p>
+                                    <p><b>length : </b>108m</p>
+                                    <p><b>Price for ticket : </b>6.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" href="#eiffelTrailer"
+                                            role="button" aria-expanded="false" aria-controls="eiffelTrailer">watch
+                                            trailer</button>
+
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-5" id="comedyMovies">
+                <div>
+                    <h1 class="text-light">Comedy Movies</h1>
+                </div>
+                <div class="row gy-3">
+                    <!-- Official Competition -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/official competition.jpg" width="100%" height="100%"
+                                    alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4 class="bg-dark">Official Competition</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Official Competition</h3>
+                                    <p class="card-text">In search of a way to leave his mark on the world and gain
+                                        appreciation, a billionaire with very little artistic knowledge decides to
+                                        initiate and fund the production of a film.</p>
+                                    <p><b>length : </b>114m</p>
+                                    <p><b>Price for ticket : </b>5.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            href="#officialCompetitionTrailer" role="button" aria-expanded="false"
+                                            aria-controls="officialCompetitionTrailer">watch
+                                            trailer</button>
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Humos full trailer -->
+                    <div class="col-md-4">
+                        <div class="card card-flip">
+                            <div class="card-front ">
+                                <img class="card-img" src="./photo/humosFullTrailer.jpg" width="100%" height="100%"
+                                    alt="">
+                                <div class="card-footer text-light  d-flex  align-items-end card-img-overlay">
+                                    <h4 class="bg-dark">Humos full trailer</h4>
+                                </div>
+                            </div>
+                            <div class="card-back bg-white">
+                                <div class="card-body">
+                                    <h3 class="card-title">Humos full trailer</h3>
+                                    <p class="card-text">What happens when ultra-Orthodox arms dealers, gay flower
+                                        growers, Arab smugglers, Thessaloniki gangsters
+                                    </p>
+                                    <p><b>length : </b>94m</p>
+                                    <p><b>Price for ticket : </b>6.6$</p>
+                                    <div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            href="#humosFullTrailerTrailer" role="button" aria-expanded="false"
+                                            aria-controls="humosFullTrailerTrailer">watch
+                                            trailer</button>
+
+                                        <a href="./orderTicktesPage.html" class="btn btn-outline-secondary">Order
+                                            Ticket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal for trailer -->
+        <div>
+            <!-- Dr Strange trailer -->
+            <div class="modal" id="drStrangeTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Dr Strange</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/aWzlQ2N6qqg></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Gun Macerick trailer -->
+            <div class="modal" id="topGunMacerickTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Top Gun Macerick</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/giXco2jaZ_4></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Haunted -->
+            <div class="modal" id="hauntedTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Haunted</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/pt81CJcWZy8></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Memory -->
+            <div class="modal" id="memoryTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Memory</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/ye63hQLDj4k></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Rock dog 2 -->
+            <div class="modal" id="rockDogTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Rock dog 2</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/UoYB1Zn6lR4></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- The Wolf and the Lion -->
+            <div class="modal" id="theWolfAndTheLionTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">The Wolf and the Lion</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/hNL5t9mHs5o></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Escape from pretoria -->
+            <div class="modal" id="escapeFromPretoriaTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Escape from pretoria</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/R_GFMbq4JPo></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Vigilante -->
+            <div class="modal" id="aVigilanteTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">A Vigilante</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/XWIL6qaG-p8></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Eiffel -->
+            <div class="modal" id="eiffelTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Eiffel</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/STXwmr01J0o></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Official Competition -->
+            <div class="modal" id="officialCompetitionTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Official Competition</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/3b0ZYBmST-U></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- humosFullTrailer -->
+            <div class="modal" id="humosFullTrailerTrailer" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">humos full trailer</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <iframe width="100%" height="350" src=https://www.youtube.com/embed/oLIqALpTOPs></iframe>
+                        </div>
+                        <div class="modal-footer justify-content-start">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark border">
+        <div class="row m-3">
+            <div class="col-md-3  text-light" id="cinemaDetails">
+                <h3>NetFilms</h3>
+                <h4>Address : </h4>
+                <p>Pinkas 32, Tel-Aviv</p>
+                <h4>Phone number : </h4>
+                <p>+972-58-4240123</p>
+                <h4>E-mail :</h4>
+                <p>netFilmes@gmail.com</p>
+                <div class="d-flex p-3 w-25 justify-content-between">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+
+
+            </div>
+            <div class="col-md-4 text-light " id="contactUs">
+                <h3>Contact Us</h3>
+                <p>In case you have a problem or you just want to talk with us</p>
+                <form>
+                        <div id="nameContactUs" class="row mb-2">
+                            <div class="col-md-2">
+                                <label  for="name" class="label-form">Name : </label>
+                            </div>
+                            <div class="col-md-5">
+                                <input  required type="text">
+                            </div>
+                        </div>
+                        <div id="phoneNumber" class="row ">
+                            <label for="phone" class="label-form col-md-2">Phone : </label>
+                            <div class="col-md-5 d-flex">
+                                <select name="prefix" id="">
+                                    <option value="050">050</option>
+                                    <option value="052">052</option>
+                                    <option value="054">054</option>
+                                    <option value="058">058</option>
+                                    <option value="053">053</option>
+                                </select>
+                                <span><b> - </b></span>
+                                <input required type="number" name="" id="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label  for="freeText" class="label-form col-md-2">Free text : </label>
+                            <textarea cols="40" required rows="5" class="col-md-8 m-2"></textarea>
+                        </div>
+                        <div class="float-center">
+                            <input class="btn btn-primary"  type="submit" value="send">
+                        </div>
+                        
+                    
+                </form>
+            </div>
+            <div class="col-md-5 text-light " id="map">
+                <h3>Map</h3>
+                <iframe width="80%" height="300" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=pinkas%2032&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
